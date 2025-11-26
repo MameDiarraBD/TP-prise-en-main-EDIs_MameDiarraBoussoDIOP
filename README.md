@@ -122,6 +122,7 @@ L'exécutable généré sera disponible dans : `P2FixAnAppDotNetCode/bin/Release
 L'application supporte actuellement :
 - Anglais (`en`, `en-US`, `en-GB`)
 - Français (`fr`, `fr-FR`)
+- **Wolof** (`wo`, `wo-SN`) - Nouveau support ajouté
 
 Configuration dans `Startup.cs` :
 ```csharp
@@ -132,12 +133,19 @@ var supportedCultures = new List<CultureInfo>
     new CultureInfo("en"),
     new CultureInfo("fr-FR"),
     new CultureInfo("fr"),
+    new CultureInfo("wo-SN"),
+    new CultureInfo("wo"),
 };
 ```
+
+### Fichiers de ressources Wolof créés :
+- `Resources/Controllers/OrderController.wo.resx` - Textes du contrôleur de commandes
+- `Resources/Models/ViewModels/Order.wo.resx` - Validations des modèles
+- `Resources/Models/ViewModels/LanguageViewModel.wo.resx` - Noms des langues
 
 ## 10. Modification et Commits
 
 ### Commits effectués :
 1. **Commit 1** : Correction des bugs dans Cart.cs (GetTotalValue et FindProductInCartLines)
-2. **Commit 2** : Ajout de la support pour la langue Wolof
+2. **Commit 2** : Ajout du support pour la langue Wolof
 3. **Commit 3** : Mise à jour de la documentation et configuration de déploiement
